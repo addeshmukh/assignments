@@ -1,0 +1,304 @@
+Q1:armstrong number
+ans:
+public class armstrong {
+
+	public static void main(String[] args) {
+		int num=153,number,a,total=0;
+		
+		number=num;
+		while(number!=0)
+		{
+			temp=number%10;
+			total=total+a*a*a;
+			number/=10;
+		}
+		if(total==num)
+			System.out.println(num+"is an armstrong number");
+		else
+			System.out.println(num+"is an not armstrong number");
+	}
+
+}
+
+
+Q2:armstrong number between 100 and 999
+ans:
+public class armstrong {
+
+	public static void main(String[] args) {
+		int n, count=0, a, b, c, sum=0;
+		System.out.print("armstrong number between 100 and 999 are:");
+		for(int i=100;i<=999;i++)
+		{ n=i;
+		  while(n>0)
+		  {
+			  b=n%10;
+			  sum=sum+(b*b*b);
+			  n=n/10;
+		  }
+		  if(sum==i)
+		  {
+			  System.out.print(i+" ");
+		  }
+		  sum=0;
+		}
+	}
+
+}
+
+Q3:simple interest and compound interest:
+ans:
+
+public class interest {
+	
+	public static void main(String arg[]) {
+		double amount=0,principle=1000,rate=10,time=3,ci,si;
+		System.out.println("principle="+principle);
+		System.out.println("rate="+rate);
+		System.out.println("time="+time);
+		amount=principle*((1+rate/100)*(1+rate/100)*(1+rate/100));
+		System.out.println("amount="+amount);
+		ci=amount-principle;
+		System.out.println("ci="+ci);
+		si=principle*rate*time;
+		System.out.println("si="+si);
+	
+	}
+
+}
+
+Q4:result:
+ans:
+import java.util.Scanner;
+
+public class studResullt {
+
+	public static void main(String[] args) {
+		
+		double sub1, sub2, sub3;
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter marks in subject 1: ");
+		sub1 = scanner.nextDouble();
+		System.out.println("Enter marks in subject 2: ");
+		sub2 = scanner.nextDouble();
+		System.out.println("Enter marks in subject 3: ");
+		sub3 = scanner.nextDouble();
+		
+		if(sub1 > 60 && sub2 > 60 && sub3 > 60)
+		{
+			System.out.println("Passed");
+		}
+		else if((sub1 >60 && sub2 >60) || (sub2 >60 && sub3 >60) || (sub1 >60 && sub3 >60))
+		{
+			System.out.println("Promoted");
+		}
+		else
+		{
+			System.out.println("Failed");
+		}
+	}
+
+}
+
+Q5:income tax
+ans:
+import java.util.Scanner;
+
+public class studResullt {
+
+	public static void main(String[] args) {
+		
+		double sub1, sub2, sub3;
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter marks in subject 1: ");
+		sub1 = scanner.nextDouble();
+		System.out.println("Enter marks in subject 2: ");
+		sub2 = scanner.nextDouble();
+		System.out.println("Enter marks in subject 3: ");
+		sub3 = scanner.nextDouble();
+		
+		if(sub1 > 60 && sub2 > 60 && sub3 > 60)
+		{
+			System.out.println("Passed");
+		}
+		else if((sub1 >60 && sub2 >60) || (sub2 >60 && sub3 >60) || (sub1 >60 && sub3 >60))
+		{
+			System.out.println("Promoted");
+		}
+		else
+		{
+			System.out.println("Failed");
+		}
+	}
+
+}
+
+Q6:CUI based application:
+ans:
+import java.util.Scanner;
+public class Atm {
+
+	public static void main(String[] args)
+	{
+		int count=0,attempt;
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter username : ");
+		String username =sc.nextLine();
+		System.out.println("Enter password :");
+		String password =sc.nextLine();
+		
+		if(username.equals("adarsh") && password.equals("Addeshmu"))
+		{
+			System.out.println("Welcome Adarsh deshmukh");
+		}
+		else 
+		{
+			count++;
+			attempt=3-count;
+			System.out.println("Try again....Remaining attempts"+attempt);
+			
+			if(attempt==0)
+			{
+				System.out.println("Contact admin");
+			}
+		}
+
+
+	}
+
+}
+
+Q7:There is an array of size 15,which may or may not be sorted.You should 
+WAP to accept a number and search if it in contained in the array.
+ans:
+
+import java.util.Arrays;
+//import java.util.stream.IntStream;
+ 
+class ArraySearch
+ {
+ 
+   
+    public static void check(int[] arr, int searchValue)
+    {
+        
+        Arrays.sort(arr);
+ 
+        
+        int result = Arrays.binarySearch(arr, searchValue);
+ 
+        boolean test = result > 0 ? true : false;
+ 
+       
+        System.out.println("Is " + searchValue + " present in given array: " + test);
+    }
+ 
+    public static void main(String[] args)
+    {
+ 
+        
+        int arr[] = { 5, 12,14,6,78,19,1,23,26,35,37,7,52,86,47 };
+ 
+        
+        int searchValue = 19;
+ 
+        
+        System.out.println("Array: " + Arrays.toString(arr));
+ 
+       
+        check(arr, searchValue);
+     }
+
+}
+
+Q8:array write method apply sorting using Bubble sort.
+ans:
+
+import java.util.Arrays;
+public class BubbleSort
+{
+
+public static void main(String[] args)
+{
+	int arr[]= {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47},temp;
+
+	System.out.println(Arrays.toString(arr));
+	
+	for(int i=0;i<arr.length-1;i++)
+	{
+		for (int j=0; j<arr.length-i-1;j++)
+		{
+			if(arr[j] > arr[j+1])
+			{
+				temp =arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+		}
+	}
+	
+	System.out.println("Sorted arrays : ");
+	System.out.println(Arrays.toString(arr));
+
+}
+}
+
+Q9:Accept the marks of 3 students for subject say A,B,C .Find Total scored and average
+In all subjects. Also,find Total and average scored by students in each respective subject.
+ans:
+
+import java.util.Scanner;
+public class Student 
+{
+
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		double a[][] = new double [3][3];
+		double total =0;
+		
+		System.out.println("Enter the marks :");
+		
+		for(int i=0;i<3;i++)
+		{
+			for(int j=0;j<3;j++)
+			{
+				a[i][j]=scanner.nextInt();
+			}
+		}
+		
+		for(int i=0;i<3;i++)
+		{
+			for(int j=0;j<3;j++)
+			{
+				total+=a[i][j];
+			}
+		}
+		System.out.println("Total marks in all subjects are :" +total);
+		
+		System.out.println("Average marks of all subjects are :" +total/9);
+		
+	
+		for(int i=0;i<3;i++)
+		{
+			total=0;
+		
+			for(int j=0;j<3;j++)
+			{
+				total +=a[i][j];
+			}
+			System.out.println();
+			System.out.println("Total marks of students :" +(i+1)+"of each subject is:"+total);
+			System.out.println("Average marks students :" +(i+1)+"of each subject is:"+total/3);
+			System.out.println();
+			total=0;
+		}
+	}
+
+}
+
+
