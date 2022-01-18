@@ -1,0 +1,148 @@
+1.	Write an application that accepts two numbers, divide the first number with the second number and display the result. Hint: You need to handle ArithmeticException which is thrown when there is an attempt to divide a number by a zero.
+ans:
+package exception_handling;
+import java.util.Scanner;
+public class arithmetic_exception {
+	public static void main(String[] args) {
+		int a,b;
+		try (Scanner scan = new Scanner(System.in)){
+			
+		            System.out.println("Enter first number ");
+					a = scan.nextInt();
+					System.out.println("Enter second number ");
+					b = scan.nextInt();
+				
+				    System.out.println(a/b);} 
+			
+			catch(ArithmeticException e)
+			{
+				System.out.println("Exception Handled "+ e);
+			}
+		
+
+	}
+
+1.1.	Carrying forward with the above problem, handled ArithmeticException by raising UnsupportedOperationException as a solution.
+ans:
+package exception_handling;
+import java.util.Scanner;
+public class unsupport_operation_exception {
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		try
+{
+			System.out.println("Enter the first number:");
+			int a=scan.nextInt();
+			System.out.println("Enter the second number");
+			int b=scan.nextInt();
+		    System.out.println(a/b);
+}
+catch(ArithmeticException c)
+{
+	c.printStackTrace();
+	System.out.println("Divide by zero is an runtime error");
+
+		
+	}
+		throw new UnsupportedOperationException("Invalid");
+
+}
+}
+
+
+}
+
+
+1.2	Perform withdraw functionality with saving account object.
+
+i)Raise InsufficientBalanceException if you are trying to withdraw more than balance.
+ans:
+package exception_handling;
+import java.util.Scanner;
+class insufficient_balance_exception extends RuntimeException{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+}
+public class saving_account {
+	Scanner scan  = new Scanner(System.in);
+	public void withdrawal(double a)
+	{
+		System.out.println("Enter Id ");
+		long id = sc.nextLong();
+		
+		System.out.println("Enter your balance ");
+		double b = scan.nextDouble();
+		try {
+			if(a<=b) {
+				b = b - a;
+				System.out.println("Balance= " + b);
+				
+			}
+			else {
+				throw new  insufficient_balance_exception();
+			}
+			
+		}
+		catch ( insufficient_balance_exception e) {
+			e.printStackTrace();
+		}
+	}
+    public static void main(String[] args) {
+    
+		
+    	saving_account s = new saving_account();
+		s.withdrawal(2000);
+	}
+
+	
+
+}
+ii) Raise a illigalBankTransaction if you are trying to withdraw negative amount from account.
+
+package Account;
+import java.util.Scanner;
+class illegal_bank_transaction_exception extends RuntimeException{
+	
+}
+public class savings_account {
+	
+	Scanner scan  = new Scanner(System.in);
+	public void withdrawal(double a)
+	{
+		System.out.println("Enter your Id ");
+		long id = scan.nextLong();
+		System.out.println("Enter your balance ");
+		double b = scan.nextDouble();
+		try {
+			if(a>0) {
+				System.out.println("Balance= " + b);
+				
+			}
+			else {
+				throw new illegal_bank_transaction_exception();
+			}
+			
+		}
+		catch (illegal_bank_transaction_exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		
+		SavingsAccount s = new SavingsAccount();
+		s.withdrawal(-10201);
+}}
+
+
+
+
+
+
+
+ 
+
+
