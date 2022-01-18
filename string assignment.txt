@@ -1,0 +1,232 @@
+assignments on class and string:
+
+1.	Write an application to determine the length of the String str=”Hello World.(Hint Use Stringmethod)
+ans:
+package strings;
+
+public class String 
+{
+	public static void main(String[] args) 
+	{
+		String str="Hey i am adarsh";
+		System.out.println("string length is" +" "+str.length());
+	}
+}
+
+
+2.	Write an application to join the two Strings “Hello,”&”How are you?”(Hint:Use String method)
+ans:package strings;
+
+public class joining_two_strings {
+	public static void main(String[] args)
+	{ String a =new String("hey");
+	String b = new String("i am adarsh");
+	String c = String.join(" ",a,b);
+	System.out.println(c.toString());
+	
+	}
+
+}
+
+3.	Given a String “Java String pool refers to collection of Strings which are stored in heap  memory”, Perform the following operations(Hint: all operation can be performed usingString methods)
+
+a.	Print the String to console in lowercase.
+ans:
+package strings;
+
+public class lower_case {
+	public static void main(String[] args)
+	{ String a ="JAVA STRING POOL REFERS TO COLLECTION OF STRINGS WHICH ARE STORE IN HEAP MEMORY";
+      String result= a.toLowerCase();
+      System.out.println("original string:"+" "+a);
+      System.out.println("lower case string:"+" "+result);
+	}
+}
+
+
+b.	Print the string to console in uppercase.
+ans:package strings;
+
+public class upper_case {
+	public static void main(String[] args)
+	{ String a ="JAVA STRING POOL REFERS TO COLLECTION OF STRINGS WHICH ARE STORE IN HEAP MEMORY";
+      String result= a.toUpperCase();
+      System.out.println("original string:"+" "+a);
+      System.out.println("upper case string:"+" "+result);
+	}
+}
+
+
+c.	Replace all ‘a’ character in the string with $ sign.
+ans:package strings;
+
+public class replace_string 
+	{
+		public static void main(String[] args) {
+			String a ="Java string pool refers to collection of strings which are in heap memory";
+			String replaceString =a.replace("a", "$");
+			System.out.println(replaceString);
+		}
+	}
+
+
+d.	Check if the orginal String contains the word “Collection”.
+ans:package strings;
+
+public class find {
+	public static void main(String[] args)
+	{
+		String a ="Java string pool refers to collection of strings which are in heap memory";
+		String b= "collection";
+		boolean result= a.contains(b);
+		if(result)
+			System.out.println(b+" "+"is in the string");
+		else
+			System.out.println("not present");
+		
+	}
+
+}
+
+
+e.	Check if the following  String “java string pool refers to collection of strings which are stored in heap memory” matches the original.
+ans:
+package strings;
+
+public class matching_two_string {
+	public static void main(String[] args) {
+		String a ="Java string pool refers to collection of strings which are in heap memory";
+		String b ="java string pool refers to collection of strings which are stored in heap memory";
+		System.out.println(a.equals(b));		
+	}
+
+}
+
+
+f.	If the string does not match check if there is another method which can be used to check if the strings are equal.
+ans:package strings;
+
+public class matching_two_string {
+	public static void main(String[] args) {
+		String a ="Java string pool refers to collection of strings which are in heap memory";
+		String b ="java string pool refers to collection of strings which are stored in heap memory";
+		System.out.println(a==b);	
+	}
+
+}
+
+
+string buffer class:
+
+1.	Write an application to append the following strings “StringBuffer”, is a peer class of String”, that provides much of”, the functionality of strings” using a StringBuffer.
+ans:
+package strings;
+
+public class append {
+	public static void main(String[] args) {
+		StringBuffer a =new StringBuffer("StringBuffer is a peer class of a string");
+		a.append(" " + "that provides much of");
+		a.append(" " +" the fuctionalities of string");
+		System.out.println(a);
+
+	}
+}
+
+
+2.	Insert the following string “insert text” into the string “it is used to_at the specified index postion” at the loction denoted by the Sign.
+
+package strings;
+
+public class insert_text 
+{
+
+	public static void main(String[] args)
+	{
+		StringBuffer a=new StringBuffer("It is used to_at the specified index position");
+		a.insert(13, "insert text ");
+		System.out.println(a);
+
+	
+	}
+
+}
+
+
+3.	Reverse the following string “This method returns the reversed object an which it was called” using StringBuffer Class.
+
+package string;
+
+public class Reverse
+{
+	public static void main(String[] args)
+	{
+		StringBuffer a=new StringBuffer("This method returns the reverse object on which it was called");
+	        a.reverse();		
+		System.out.println(a);
+
+	}
+
+}
+
+
+                            Assignment on StringBulider Class:
+1.	Write an application to append to append the following strings “StringBulider”,
+    “is a peer of a String”, “that provides much of”, “the funcationalities of String” using      StringBulider.
+	
+
+
+package string;
+
+public class append_string_builder
+{
+	public static void main(String[] args)
+	{
+		StringBuilder a=new StringBuilder("StringBuilder is a peer class of a string");
+		a.append(" " + "that provides much of");
+		a.append(" " +" the functionalities of string");
+		System.out.println(a);
+
+	}
+
+}
+
+2.	Insert the following string “ insert text” into the string  “it is used to_at the specified
+Index position” at the location denoated by_sign using StringBulider.
+	
+
+
+package string;
+
+public class insert_string_builder 
+{
+
+	public static void main(String[] args)
+	{
+		StringBuilder a =new StringBuilder("It is used to at the specified index position");
+		a.insert(11, "insert text ");
+		System.out.println(a);
+
+		
+
+	}
+
+}
+
+
+3.	Reverse the following string :This method is used to return the reverse object on which it was called” using StringBulider class.
+
+
+package string;
+
+public class reverse_string_builder
+{
+	public static void main(String[] args)
+	{
+		StringBuilder a=new StringBuilder("This method returns the reverse object on which it was called");
+		a.reverse();
+		System.out.println(a);
+
+	}
+
+}
+
