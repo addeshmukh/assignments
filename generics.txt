@@ -1,0 +1,115 @@
+.1.Use a Hashset to hold employee objects. Upon running application, the details of the employees added to the HashSet should be displayed.
+ans:
+package generics;
+import java.util.HashSet;
+public class hashset{
+public static void main(String[] args)
+{
+	HashSet<emp>set=new HashSet<emp>();
+	emp e=new emp(1,"adarsh","admin",50000.25);
+	set.add(e);
+	for(emp e1:set)
+	{
+		System.out.println(e.id+" "+e.name+" "+e.dep+" "+e.sal);
+	}
+}
+}
+package generics;
+public class emp {
+	int id;
+	String name,dep;
+	double sal;
+	
+	public emp(int id, String name, String dep, double sal) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.dep = dep;
+		this.sal = sal;
+	}
+}
+
+Q2.Write an application to hold 10 random int values as key and random double values as values for HashMap. Print the data store in HashMap.
+ans:
+package generics;
+import java.util.HashMap;
+import java.util.Map;
+
+public class hashset {
+	public static void main(String[] args) {
+        Map<Integer,Double> map=new HashMap<>();
+		map.put(8, 44.2);
+		map.put(25, 57.4);
+		map.put(70, 67.9);
+		map.put(66, 77.2);
+		map.put(79, 42.1);
+		map.put(43, 7.7);
+		map.put(92, 66.6);
+		map.put(40, 20.2);
+		map.put(32, 89.5);
+		map.put(96, 23.6);
+           System.out.println(map);
+    
+
+
+	}
+
+}
+
+Q3:Swapping of 2 numbers in array list
+ans:
+package generics;
+import java.util.Arrays;
+public class swap {
+	public static <A> void swap(int[] ar,int i1,int i2)
+	{
+		int temp = ar[i2];
+		ar[i2]=ar[i1];
+		ar[i1]=temp;
+	}
+ private static void swap1() {
+		int[] arr= {1,2,3,4,5};
+		swap(arr,0,2);
+		System.out.println("swapped" +Arrays.toString(arr));
+		
+}
+ public static void main(String[] args)
+ {
+	 swap1();
+ }
+}
+
+Q4:Design a class named pair which has two properties. The name of the first property is key and that of the second property is value.
+ans:
+package generics;
+import java.util.*;
+
+public class add{
+	public static void main(String[] args) {
+		Map<String,String> map=new HashMap<>();
+        map.put("hello", "5");
+	map.put("there", "2");
+        System.out.println(map);
+	 
+	}
+
+}
+
+
+b:
+ans:
+package generics;
+import java.util.Date;
+import java.util.HashMap;
+
+
+public class date{
+	public static void main(String[] args) {
+		HashMap<String ,Date>map=new HashMap<String,Date>();
+		map.put("Today is", (Date) new java.util.Date());
+		System.out.println(map);
+	 
+	}
+
+}
+
